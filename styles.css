@@ -49,6 +49,7 @@ h1 {
 
 #gameControl:hover {
   background-color: #1CBD3F;
+
 }
 
 
@@ -135,9 +136,8 @@ h1 {
   }
 
   .close-button {
-    float: right;
-    width: 1.5rem;
-    line-height: 1.5rem;
+    width: 70px;
+    line-height: 70px;
     text-align: center;
     cursor: pointer;
     border-radius: 0.25rem;

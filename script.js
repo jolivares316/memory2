@@ -29,14 +29,16 @@ let stars = document.querySelector(".stars");
 // used sabe.io tutoral for Modal box
 function toggleModal() {
   modal.classList.toggle("show-modal");
+  document.querySelector(".close-button").addEventListener("click", resetGame);
+  //document.querySelector(".gameControl").addEventListener("click", resetGame);
   winningMoves.innerHTML = "Moves: " + moves;
-  let woohoo = document.querySelector('.stars');
-  let ohYeah= document.querySelector('.modal-content');
-  ohYeah.appendChild(woohoo);
-  document.getElementById("gameControl").addEventListener("click", startGame);
-  document.getElementById("gameControl").addEventListener("click", toggleModal);
-  document.getElementById("gameControl").addEventListener("click", resetGame);
-  document.getElementById("gameControl").addEventListener("click", resetStars);
+  //let woohoo = document.querySelector('.stars');
+  //let ohYeah= document.querySelector('.modal-content');
+  //ohYeah.appendChild(woohoo);
+  //document.getElementById("gameControl").addEventListener("click", startGame);
+  //document.getElementById("gameControl").addEventListener("click", toggleModal);
+  //document.getElementById("gameControl").addEventListener("click", resetGame);
+  //document.getElementById("gameControl").addEventListener("click", resetStars);
   //document.querySelector(".restart").addEventListener("click", resetGame);
   //document.getElementById("gameControl").addEventListener("click", res);
 
@@ -82,7 +84,7 @@ function startGame() {
   buttonmessage.innerHTML = "Restart Game";
   messageText("Click a Tile to start")
   for (let i=0; i <= ((solutionArray.length)-1); i++) {
-    gameboard.innerHTML += '<div class="deck"><img id="cardOpen'+i+'" src="images/wc-logo.jpg" onclick="pickCard(\''+solutionArray[i]+'\',\''+i+'\',this);return false;" class="images"> </div>';
+    gameboard.innerHTML += '<div class="deck"><img id="cardOpen'+i+'" src="Images/wc-logo.jpg" onclick="pickCard(\''+solutionArray[i]+'\',\''+i+'\',this);return false;" class="images"> </div>';
   }
 }
 
@@ -198,13 +200,15 @@ function shuffleArray(d) {
 
 //reset icon
 document.querySelector(".restart").addEventListener("click", resetGame);
+//reset button on model
+//document.querySelector(".gameControl").addEventListener("click", resetGame);
 
 
 //reset the game
 function resetGame () {
-  resetStars();
   resetMoves();
   startGame();
+  resetStars();
 }
 
 
