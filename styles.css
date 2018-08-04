@@ -1,0 +1,187 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('wallpaper.jpg'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#gameControl {
+  /*display: none; */
+  background-color: #D31B26;
+  border-radius: 4px;
+  padding: 5px;
+  width: auto;
+  color: #EBEBEB;
+  border: none;
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#gameControl:hover {
+  background-color: #1CBD3F;
+}
+
+
+.restartButton {
+  background: blue;
+  padding: 3px;
+}
+
+#message {
+  text-align: center;
+  color: green;
+  font-size: 20px;
+  background: black;
+}
+
+#myTime {
+  text-align: center;
+  background-color: black;
+  color: #fff;
+}
+
+#gameboard {
+  width: 660px;
+  min-height: 680px;
+  border: 1px solid #fff;
+  padding: 32px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 3em;
+  }
+
+  .deck .images {
+    height: 125px;
+    width: 125px;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  }
+
+  .images {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .score-panel {
+      text-align: left;
+      width: 345px;
+      margin-bottom: 10px;
+  }
+
+  /* Modal */
+
+  .modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0.0.8);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  }
+
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+    color: white;
+  }
+
+  .close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+  }
+
+  .close-button:hover {
+    background-color: darkgray;
+  }
+
+  .show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s
+  }
+
+  /*
+   * Styles for the Score Panel
+   */
+
+  .score-panel {
+      text-align: left;
+      width: 345px;
+      margin-bottom: 10px;
+  }
+
+  .score-panel .stars {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      margin: 0 5px 0 0;
+  }
+
+  .score-panel .stars li {
+      list-style: none;
+      display: inline-block;
+  }
+
+  .score-panel .restart {
+      float: right;
+      cursor: pointer;
+  }
+
+  .trigger {
+    display: none;
+  }

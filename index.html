@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>World Cup Memory Game</title>
+</head>
+<body>
+
+<div id="wrapper">
+  <header>
+      <h1>World Cup Matching Game</h1>
+  </header>
+  <section class="score-panel">
+    <div =class="timer" id="myTime">00:00:00</div>
+    <div =class="timer" id="message">Press Play to Start</div>
+    <button class="trigger">Click here to trigger the modal!</button>
+    <div class="modal">
+      <div class="modal-content">
+        <div id="gameControl" class="restartButton">
+          Play
+        </div>
+        <span class="close-button">&times;</span>
+        <h1>Way to go Champ! You won the World Cup!</h1>
+        <p>Here's your scores for moves, time, and star</p>
+        <div class="winning-moves"></div>
+        <div class="timer" id="modalTimer">00:00:00</div>
+        <span class="final-star"></span>
+
+
+      </div>
+    </div>
+    <section class="score-panel">
+      <ul class="stars">
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+      </ul>
+
+      <span class="moves"></span> Moves
+
+      <div class="restart">
+        <i class="fa fa-repeat"></i>
+      </div>
+    </section>
+
+
+    <div class="row"></div>
+
+
+
+
+    <div id="restart">
+
+    </div>
+  </section>
+
+  <div id="gameboard">
+
+
+  </div>
+
+
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
