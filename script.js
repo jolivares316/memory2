@@ -18,20 +18,25 @@ let closeButton = document.querySelector(".close-button");
 let moves = 0;
 let winningTime = document.querySelector(".winning-time");
 let winningMoves = document.querySelector(".winning-moves");
-let finalStar = document.querySelector(".final-star");
+//let finalStar = document.querySelector(".final-star");
 let restart = document.querySelector(".restart");
 let stars = document.querySelector(".stars");
 
 
-//hideStar();
-//hideStar();
 
 // used sabe.io tutoral for Modal box
 function toggleModal() {
   modal.classList.toggle("show-modal");
-  document.querySelector(".close-button").addEventListener("click", resetGame);
+  document.querySelector(".close-button").addEventListener("click", reload);
   //document.querySelector(".gameControl").addEventListener("click", resetGame);
-  winningMoves.innerHTML = "Moves: " + moves;
+  winningMoves.innerHTML = "Moves: " + moves;  // displays moves on modal
+  let mStars = document.querySelector('.stars');
+  let mContent= document.querySelector('.modal-content');
+  const pStar = document.createElement('div');  //creates div on modal
+  pStar.className = "rating";     //assings class to new div
+  pStar.innerHTML = "<p>Stars Score: </p>";
+  pStar.appendChild(mStars);
+  mContent.insertBefore(pStar, buttonmessage);
   //let woohoo = document.querySelector('.stars');
   //let ohYeah= document.querySelector('.modal-content');
   //ohYeah.appendChild(woohoo);
@@ -41,7 +46,6 @@ function toggleModal() {
   //document.getElementById("gameControl").addEventListener("click", resetStars);
   //document.querySelector(".restart").addEventListener("click", resetGame);
   //document.getElementById("gameControl").addEventListener("click", res);
-
   //moves= 0;
   //star.style.display = 'inline';
 }
@@ -57,18 +61,16 @@ trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 
-
-
-
 //udemy memory game course referenced
 
 flipArray = new Array();
 //console.log(solutionArray);
-
 //console.log(solutionArray);
 //console.log(tileImages);
 startGame();
 
+
+//stars game
 function startGame() {
   /// Clear Gameboard
   //clearInterval(flipTimer);
@@ -88,9 +90,10 @@ function startGame() {
   }
 }
 
+//picking card
+
 function pickCard(a, b, c){
   //console.log(c);
-
   if(cardsFlippedOver < 2 && lastCardPicked != b) {
     flipArray[cardsFlippedOver] = solutionArray [b];
     flipArray[(cardsFlippedOver) + 2] = c.id;
@@ -123,6 +126,7 @@ function pickCard(a, b, c){
   // console.log(flipArray)
 }
 
+//message while playing
 function messageText(message) {
   clearInterval(messageTimer);
   console.log('message');
@@ -132,6 +136,7 @@ function messageText(message) {
   }
 }
 
+//adds time to clock as game boes by
 function addTime () {
   gameScore--;
   seconds++;
@@ -201,8 +206,12 @@ function shuffleArray(d) {
 //reset icon
 document.querySelector(".restart").addEventListener("click", resetGame);
 //reset button on model
-//document.querySelector(".gameControl").addEventListener("click", resetGame);
+document.querySelector("#gameControl").addEventListener("click", reload);
 
+//reloads page 
+function reload (){
+  location.reload();
+}
 
 //reset the game
 function resetGame () {
