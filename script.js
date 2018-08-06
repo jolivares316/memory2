@@ -208,7 +208,7 @@ document.querySelector(".restart").addEventListener("click", resetGame);
 //reset button on model
 document.querySelector("#gameControl").addEventListener("click", reload);
 
-//reloads page 
+//reloads page
 function reload (){
   location.reload();
 }
