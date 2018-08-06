@@ -190,8 +190,8 @@ function pickAgain() {
 
 //hiding cards
 function hideCard() {
-  document.getElementById(flipArray[2]).src = "images/wc-logo.jpg";
-  document.getElementById(flipArray[3]).src = "images/wc-logo.jpg";
+  document.getElementById(flipArray[2]).src = "Images/wc-logo.jpg";
+  document.getElementById(flipArray[3]).src = "Images/wc-logo.jpg";
   pickAgain();
 }
 //from Udemey's Memory Game course
