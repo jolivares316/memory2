@@ -25,3 +25,9 @@ To celebrate Russia 2018 World Cup, I created a themed guessing game.
 * Game starts the game with a star rating of three
 * As moves are made the star rating decreases
 * The goal of the game is to win the game with the highest amount of stars as possible
+
+## Dependencies
+
+* The game relies on having a browser installed.
+* Game was tested on Chrome and Safari
+* Fonts included on starter files are "Coda" (or Cursive) and "Open Sans" (or any sans-serif)

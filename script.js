@@ -38,17 +38,6 @@ function toggleModal() {
   pStar.appendChild(mStars);
   mContent.insertBefore(pStar, buttonmessage);
   stopClock();
-  //let woohoo = document.querySelector('.stars');
-  //let ohYeah= document.querySelector('.modal-content');
-  //ohYeah.appendChild(woohoo);
-  //document.getElementById("gameControl").addEventListener("click", startGame);
-  //document.getElementById("gameControl").addEventListener("click", toggleModal);
-  //document.getElementById("gameControl").addEventListener("click", resetGame);
-  //document.getElementById("gameControl").addEventListener("click", resetStars);
-  //document.querySelector(".restart").addEventListener("click", resetGame);
-  //document.getElementById("gameControl").addEventListener("click", res);
-  //moves= 0;
-  //star.style.display = 'inline';
 }
 
 
@@ -62,14 +51,9 @@ function windowOnClick(event) {
 
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
-//window.addEventListener("click", windowOnClick);
-
 //udemy memory game course referenced
 
 flipArray = new Array();
-//console.log(solutionArray);
-//console.log(solutionArray);
-//console.log(tileImages);
 startGame();
 
 
@@ -113,7 +97,7 @@ function pickCard(a, b, c){
           console.log('Game Over!');
           gameDone ();
           stopClock ();
-          //toggleModal();
+          //toggleModal();  //yeah
         }
       } else {
         //hideCard();
@@ -125,8 +109,6 @@ function pickCard(a, b, c){
     }
     lastCardPicked = b;
   }
-  // to find out if they are different
-  // console.log(flipArray)
 }
 
 //message while playing
