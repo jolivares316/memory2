@@ -37,6 +37,7 @@ function toggleModal() {
   pStar.innerHTML = "<p>Stars Score: </p>";
   pStar.appendChild(mStars);
   mContent.insertBefore(pStar, buttonmessage);
+  stopClock();
   //let woohoo = document.querySelector('.stars');
   //let ohYeah= document.querySelector('.modal-content');
   //ohYeah.appendChild(woohoo);
@@ -50,6 +51,8 @@ function toggleModal() {
   //star.style.display = 'inline';
 }
 
+
+// to show  or hide modal
 function windowOnClick(event) {
   if (event.target === modal) {
     toggleModal();
@@ -59,7 +62,7 @@ function windowOnClick(event) {
 
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
+//window.addEventListener("click", windowOnClick);
 
 //udemy memory game course referenced
 
