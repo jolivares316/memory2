@@ -101,7 +101,7 @@ function pickCard(a, b, c){
     flipArray[cardsFlippedOver] = solutionArray [b];
     flipArray[(cardsFlippedOver) + 2] = c.id;
   cardsFlippedOver++;
-  c.src = 'images/'+solutionArray[b];
+  c.src = 'Images/'+solutionArray[b];
     if(cardsFlippedOver == 2) {
       if(flipArray[0] === flipArray[1]) {
         messageText("GOOOOOOOOOOOOOL!");
@@ -207,7 +207,7 @@ function shuffleArray(d) {
 
 
 //reset icon
-document.querySelector(".restart").addEventListener("click", resetGame);
+document.querySelector(".restart").addEventListener("click", reload);
 //reset button on model
 document.querySelector("#gameControl").addEventListener("click", reload);
 
